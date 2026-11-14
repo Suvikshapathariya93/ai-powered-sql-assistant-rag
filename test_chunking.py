@@ -18,13 +18,12 @@ def test_invalid_overlap():
         chunk_text("some text", chunk_size=10, overlap=10)
 
 
-Why are we using these tests?
-
-When developing a text-processing application (such as an AI/RAG pipeline, search engine, document processor, or QA automation project), 
+Q: Why are we using these tests?
+A:When developing a text-processing application (such as an AI/RAG pipeline, search engine, document processor, or QA automation project), 
 we need confidence that our code works correctly even after future changes. These tests automatically validate that behavior.
 
-Test	                    Purpose
-test_clean_text()	     Confirms text cleaning removes extra spaces and excessive blank lines.
-test_blank_text()	     Ensures empty or whitespace-only input returns no chunks.
-test_splits_long_text()  Checks that large text is properly divided into multiple chunks and no chunk is empty.
-test_invalid_overlap()	Validates input parameters and prevents invalid chunking configurations.
+Test	                    | Purpose
+test_clean_text()	     | Confirms text cleaning removes extra spaces and excessive blank lines.
+test_blank_text()	     | Ensures empty or whitespace-only input returns no chunks.
+test_splits_long_text()  | Checks that large text is properly divided into multiple chunks and no chunk is empty.
+test_invalid_overlap()	| Validates input parameters and prevents invalid chunking configurations.
